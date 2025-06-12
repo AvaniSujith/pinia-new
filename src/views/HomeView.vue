@@ -20,6 +20,13 @@ const storeCounter = useCounterStore()
         <div>
             The counter is : {{  storeCounter.OddOrEven }}
         </div>
+
+        <hr>
+
+        <h3>Edit counter:</h3>
+        <input 
+            v-model="storeCounter.count"
+            type="number" />
     </div>
 </template>
 
