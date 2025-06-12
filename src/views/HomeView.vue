@@ -3,6 +3,10 @@ import { ref } from 'vue';
 
 const count = ref(0);
 
+function increaseCount(){
+    count.value++
+}
+
 </script>
 
 <template>
@@ -10,7 +14,7 @@ const count = ref(0);
         <div class="count">{{  count }}</div>
         <div class="buttons">
             <button>-</button>
-            <button>+</button>
+            <button @click="increaseCount">+</button>
         </div>
     </div>
 </template>
