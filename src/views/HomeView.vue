@@ -7,13 +7,17 @@ function increaseCount(){
     count.value++
 }
 
+function decreaseCount(){
+    count.value--
+}
+
 </script>
 
 <template>
     <div class="home">
         <div class="count">{{  count }}</div>
         <div class="buttons">
-            <button>-</button>
+            <button @click="decreaseCount">-</button>
             <button @click="increaseCount">+</button>
         </div>
     </div>
