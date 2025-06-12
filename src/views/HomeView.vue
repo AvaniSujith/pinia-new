@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref,computed } from 'vue';
 
 const count = ref(0);
 
@@ -11,6 +11,11 @@ function decreaseCount(){
     count.value--
 }
 
+const OddOrEven = computed(() => {
+    if(count.value % 2 === 0) return 'Even'
+    return 'Odd'
+})
+
 </script>
 
 <template>
@@ -19,6 +24,12 @@ function decreaseCount(){
         <div class="buttons">
             <button @click="decreaseCount">-</button>
             <button @click="increaseCount">+</button>
+        </div>
+
+        <hr>
+
+        <div>
+            The counter is : {{  OddOrEven }}
         </div>
     </div>
 </template>
